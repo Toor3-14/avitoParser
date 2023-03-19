@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+    app:
+        build: .
+        container_name: app
+        ports:
+            - 8080:8080
+        links:
+            - mysql
+        environment:
+            MYSQL_ADDR: root:@tcp(mysql:3306)
+            DB_NAME: "avitoParser"
+
+            SENDER_HOST: smtp.gmail.com
+            SENDER_PORT: 587
+            SENDER_MAIL: example@gmail.com 
+            MAIL_PASSWORD: password
+            
+            # below settings allow to scan maximum ~300 links, if you need more, you should reconfigure it
+            MIN_TO_SCRAPPING_ALL_LINKS: 5 # delay in minutes before next loop of scrapping all links
+            SEC_TO_GET_ONE_PAGE: 1 # delay in seconds to scan one page
+
+
+    mysql:
+        image: mysql/mysql-server:5.6
+        container_name: mysql
+        ports:
+            - 3306:3306
+        environment:
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=avitoParser
+            - MYSQL_ROOT_HOST=%
+        command: --init-file /data/application/init.sql
+        volumes:
+            - ./init.sql:/data/application/init.sql
