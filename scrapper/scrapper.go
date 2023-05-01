@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vpoletaev11/avitoParser/errhand"
+	"github.com/Toor3-14/avitoParser/errhand"
 )
 
 const (
