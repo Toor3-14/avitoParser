@@ -6,8 +6,8 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 
-	"github.com/vpoletaev11/avitoParser/scrapper"
-	"github.com/vpoletaev11/avitoParser/subscribe"
+	"github.com/Toor3-14/avitoParser/scrapper"
+	"github.com/Toor3-14/avitoParser/subscribe"
 )
 
 func main() {
