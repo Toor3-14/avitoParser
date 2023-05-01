@@ -14,8 +14,8 @@ import (
 	"github.com/DATA-DOG/go-sqlmock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/vpoletaev11/avitoParser/scrapper"
-	"github.com/vpoletaev11/avitoParser/subscribe"
+	"github.com/Toor3-14/avitoParser/scrapper"
+	"github.com/Toor3-14/avitoParser/subscribe"
 )
 
 func TestHandlerSuccess(t *testing.T) {
