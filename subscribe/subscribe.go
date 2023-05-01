@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/vpoletaev11/avitoParser/errhand"
-	"github.com/vpoletaev11/avitoParser/scrapper"
+	"github.com/Toor3-14/avitoParser/errhand"
+	"github.com/Toor3-14/avitoParser/scrapper"
 )
 
 const (
